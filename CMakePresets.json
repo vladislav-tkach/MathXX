@@ -15,7 +15,7 @@
         "value": "x64",
         "strategy": "external"
       },
-      "binaryDir": "${sourceDir}/bin/_cofig/"
+      "binaryDir": "${sourceDir}/bin/_config/"
     },
     {
       "name": "_VS2019-Debug",
@@ -42,8 +42,7 @@
     {
       "name": "_Default",
       "hidden": true,
-      "configurePreset": "_VS2019-Base",
-      "verbose": true
+      "configurePreset": "_VS2019-Base"
     }
   ]
 }
