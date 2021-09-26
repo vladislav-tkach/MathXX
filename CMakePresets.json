@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 5
+  },
+  "configurePresets": [
+    {
+      "name": "_VS2019-Base",
+      "hidden": true,
+      "displayName": "Visual Studio 2019 Base",
+      "generator": "Visual Studio 16 2019",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "binaryDir": "${sourceDir}/bin/_cofig/"
+    },
+    {
+      "name": "_VS2019-Debug",
+      "hidden": true,
+      "inherits": "_VS2019-Base",
+      "displayName": "Visual Studio 2019 Debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS_DEBUG": "/MDd /Zi /Ob0 /Od /RTC1 /WX /D_DEBUG"
+      }
+    },
+    {
+      "name": "_VS2019-Release",
+      "hidden": true,
+      "inherits": "_VS2019-Base",
+      "displayName": "Visual Studio 2019 Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS_RELEASE": "/MD /O3 /Ob3 /GL /Zo /WX /DNDEBUG"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "_Default",
+      "hidden": true,
+      "configurePreset": "_VS2019-Base",
+      "verbose": true
+    }
+  ]
+}
