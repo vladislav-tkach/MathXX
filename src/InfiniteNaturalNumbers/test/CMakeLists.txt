@@ -1,4 +1,4 @@
-set(TargetName "RealNumbers.UnitTests")
+set(TargetName "InfiniteNaturalNumbers.UnitTests")
 
 file(GLOB_RECURSE SRC_FILES *)
 
@@ -8,6 +8,7 @@ target_link_libraries(${TargetName}
 	PUBLIC
 	gtest
 	gtest_main
+	InfiniteNaturalNumbers
 )
 
 add_test(NAME ${TargetName} COMMAND ${TargetName})

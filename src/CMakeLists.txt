@@ -1,1 +1,1 @@
-add_subdirectory(RealNumbers)
+add_subdirectory(InfiniteNaturalNumbers)

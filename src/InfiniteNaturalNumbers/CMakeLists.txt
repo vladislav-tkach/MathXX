@@ -1,4 +1,4 @@
-set(TargetName "RealNumbers")
+set(TargetName "InfiniteNaturalNumbers")
 
 file(GLOB_RECURSE HEADER_FILES include/*)
 file(GLOB_RECURSE SRC_FILES src/*)
